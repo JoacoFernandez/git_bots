@@ -13,3 +13,5 @@ jobs:
       uses: ./Cheer
     - name: AirP0ds
       uses: ./AirP0ds
+      with: 
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
