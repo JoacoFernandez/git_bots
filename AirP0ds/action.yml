@@ -1,0 +1,6 @@
+name: 'Lyndsey'
+description: 'NO SOS UN CAPO'
+
+runs:
+  using: 'node12'
+  main: 'index.js'
