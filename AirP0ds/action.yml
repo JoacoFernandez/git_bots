@@ -1,6 +1,7 @@
 name: 'Lyndsey'
 description: 'NO SOS UN CAPO'
-
+inputs:
+  repo-token:   ${{ secrets.GITHUB_TOKEN }}
 runs:
   using: 'node12'
   main: 'index.js'
