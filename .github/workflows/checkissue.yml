@@ -1,0 +1,11 @@
+name: Check Issue
+on:
+  issues:
+    types: [opened]
+jobs:
+  greeting:
+    name: Greeting
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
