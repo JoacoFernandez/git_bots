@@ -25,7 +25,7 @@ const github = require('@actions/github');
    })
 
   }
-  else if ( !(issue.body.includes(checklist_item_1)||issue.body.includes(checklist_item_2))) {
+  else if ( !issue.body.includes(checklist_item_1)||!issue.body.includes(checklist_item_2)) {
     octokit.issues.createComment({
       owner: github.context.repo.owner,
       repo: github.context.repo.repo,
