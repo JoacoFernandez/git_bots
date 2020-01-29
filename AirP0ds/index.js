@@ -28,7 +28,7 @@ const github = require('@actions/github');
   else if ( !issue.body.includes(checklist_item_1)||!issue.body.includes(checklist_item_2)) {
     var comment
     if (!issue.body.includes(checklist_item_1) &&  !issue.body.includes(checklist_item_2)) {
-      comment = "Please make sure that you update fastlane to the latest version." + "Please make sure that read the README.md"
+      comment = "Please make sure that you update fastlane to the latest version." + "\n" + "Please make sure that read the README.md"
     }
     else if (!issue.body.includes(checklist_item_1)) {
       comment = "Please make sure that you update fastlane to the latest version."
