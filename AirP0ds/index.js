@@ -31,3 +31,4 @@ const github = require('@actions/github');
       issue_number: issue.number,
       body: "Please make sure that you update fastlane to the latest version."
     })
+  }
