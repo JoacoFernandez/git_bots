@@ -15,4 +15,10 @@ const github = require('@actions/github');
      issue_number: issue.number,
      state: "closed"
    })
+   octokit.issues.createComment({
+     owner: github.context.repo.owner,
+     repo: github.context.repo.repo,
+     issue_number: issue.number,
+     body: body
+   })
   }
