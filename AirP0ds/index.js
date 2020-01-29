@@ -33,7 +33,7 @@ const github = require('@actions/github');
     else if (!issue.body.includes(checklist_item_1)) {
       comment = "Please make sure that you update fastlane to the latest version."
     }
-    else (! issue.body.includes(checklist_item_2)){
+    else if (! issue.body.includes(checklist_item_2)){
       comment = "Please make sure that read the README.md"
     }
 
