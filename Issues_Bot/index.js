@@ -69,4 +69,4 @@ const github = require('@actions/github');
     return
   }
 
-  EnsureChecklistCompleted(octokit, body, github.context.repo)
+  EnsureChecklistCompleted(octokit, issue.body, github.context.repo)
