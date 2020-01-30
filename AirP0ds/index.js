@@ -24,7 +24,7 @@ const github = require('@actions/github');
     console.log("If you want to see the issue details, just type ´/debug´ in your issue description.")
   }
 
-  function Greetings(){
+  function EnsureChecklistCompleted(octokit, body, repo){
     console.log("HI, I am in the console. Pls $end Nudes.")
   }
   Greetings()
