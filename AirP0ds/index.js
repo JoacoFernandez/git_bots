@@ -10,7 +10,7 @@ const github = require('@actions/github');
   body = "![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)"
   const checklist_item_1 ="- [x] Updated `fastlane-plugin-test_center` to the latest version"
   const checklist_item_2 ="- [x] I read the [README.md](https://github.com/lyndsey-ferguson/fastlane-plugin-test_center/blob/master/README.md)"
-  const checklist_item_3 ="- [x] I reviewed the [example(s)](https://github.com/lyndsey-ferguson/fastlane-plugin-test_center/blob/master/README.md) for the action(s) I am using "
+  const checklist_item_3 ="- [x] I reviewed the [example(s)](https://github.com/lyndsey-ferguson/fastlane-plugin-test_center/blob/master/README.md) for the action(s) I am using"
   if (issue.body === "") {
    octokit.issues.update({
      owner: github.context.repo.owner,
