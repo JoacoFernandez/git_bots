@@ -30,16 +30,16 @@ const github = require('@actions/github');
   else if (!issue.body.includes(checklist_item_1)||!issue.body.includes(checklist_item_2)||!issue.body.includes(checklist_item_3)||!issue.body.includes(checklist_item_4)) {
     var comment = ""
     if (!issue.body.includes(checklist_item_1)){
-      comment = comment + "Please make sure that you update fastlane to the latest version."
+      comment = comment + "_**Please** make sure that you update fastlane to the latest version._"
     }
     if (!issue.body.includes(checklist_item_2)){
-      comment = comment + "\n" + "Please make sure that read the README.md"
+      comment = comment + "\n" + "_**Please** make sure that read the README.md_"
     }
     if (!issue.body.includes(checklist_item_3)){
-      comment = comment + "\n" + "Please make sure that you have reviewed the documentation for the action you are using"
+      comment = comment + "\n" + "_**Please** make sure that you have reviewed the documentation for the action you are using_"
     }
     if (!issue.body.includes(checklist_item_4)){
-      comment = comment + "\n" + "Please make sure that you have removed all sensitive data, otherwise people may use that data in ways that cause harm."
+      comment = comment + "\n" + "_**Please** make sure that you have removed all sensitive data, otherwise people may use that data in ways that cause harm._"
     }
     octokit.issues.createComment({
       owner: github.context.repo.owner,
