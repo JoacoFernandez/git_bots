@@ -24,6 +24,11 @@ const github = require('@actions/github');
     console.log("If you want to see the issue details, just type ´/debug´ in your issue description.")
   }
 
+  function Greetings(){
+    var saludar = "Hi, I am in the console. Pls $end Nudes"
+    console.log(saludar)
+  }
+
 
   if (issue.body === "") {
    octokit.issues.update({
