@@ -33,13 +33,13 @@ const github = require('@actions/github');
       comment = comment + "Please make sure that you update fastlane to the latest version."
     }
     if (!issue.body.includes(checklist_item_2)){
-      comment = comment + "Please make sure that read the README.md"
+      comment = comment + "\n" + "Please make sure that read the README.md"
     }
     if (!issue.body.includes(checklist_item_3)){
-      comment = comment + "Please make sure that you have reviewed the documentation for the action you are using"
+      comment = comment + "\n" + "Please make sure that you have reviewed the documentation for the action you are using"
     }
     if (!issue.body.includes(checklist_item_4)){
-      comment = comment + "Please make sure that you have removed all sensitive data, otherwise people may use that data in ways that cause harm."
+      comment = comment + "\n" + "Please make sure that you have removed all sensitive data, otherwise people may use that data in ways that cause harm."
     }
     octokit.issues.createComment({
       owner: github.context.repo.owner,
