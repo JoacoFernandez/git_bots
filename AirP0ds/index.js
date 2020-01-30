@@ -28,8 +28,8 @@ const github = require('@actions/github');
   }
   else if ( !issue.body.includes(checklist_item_1)||!issue.body.includes(checklist_item_2)||(!checklist_item_3)) {
     var comment
-    if (!issue.body.includes(checklist_item_1) &&  !issue.body.includes(checklist_item_2)) {
-      comment = "Please make sure that you update fastlane to the latest version." + "\n" + "Please make sure that read the README.md"
+    if (!issue.body.includes(checklist_item_1) &&  !issue.body.includes(checklist_item_2) && (checklist_item_3)) {
+      comment = "Please make sure that you update fastlane to the latest version." + "\n" + "Please make sure that read the README.md" + "\n" + "Please make sure that you have reviewed the documentation for the action you are using"
     }
     else if (!issue.body.includes(checklist_item_1)) {
       comment = "Please make sure that you update fastlane to the latest version."
