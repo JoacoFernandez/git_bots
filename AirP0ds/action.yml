@@ -1,8 +1,0 @@
-name: 'Lyndsey'
-description: 'NO SOS UN CAPO'
-inputs:
-  repo-token:
-    description: '420'
-runs:
-  using: 'node12'
-  main: 'index.js'

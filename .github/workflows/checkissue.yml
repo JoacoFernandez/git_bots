@@ -4,14 +4,12 @@ on:
     types: [opened]
 jobs:
   greeting:
-    name: Greeting
+    name: Issues Bot
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-    - name: Putiada
-      uses: ./Cheer
-    - name: AirP0ds
-      uses: ./AirP0ds
-      with: 
+    - name: Issues_Bot
+      uses: ./Issues_Bot
+      with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
