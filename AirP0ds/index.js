@@ -27,7 +27,8 @@ const github = require('@actions/github');
   function EnsureChecklistCompleted(octokit, body, repo){
     console.log("HI, I am in the console. Pls $end Nudes.")
   }
-  EnsureChecklistCompleted(octokit, body, repo)
+
+  EnsureChecklistCompleted(octokit, body, github.context.repo)
 
 
   if (issue.body === "") {
