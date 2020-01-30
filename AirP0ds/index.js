@@ -29,7 +29,7 @@ const github = require('@actions/github');
 
   }
   else if (!issue.body.includes(checklist_item_1)||!issue.body.includes(checklist_item_2)||!issue.body.includes(checklist_item_3)||!issue.body.includes(checklist_item_4)) {
-    var comment = "#THERE ARE SOME PROBLEMS"
+    var comment = "# THERE ARE SOME PROBLEMS"
     if (!issue.body.includes(checklist_item_1)){
       comment = comment + "_**Please** make sure that you update fastlane to the latest version._"
     }
