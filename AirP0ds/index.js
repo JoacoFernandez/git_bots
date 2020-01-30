@@ -25,11 +25,9 @@ const github = require('@actions/github');
   }
 
   function Greetings(){
-    var saludar = "Hi, I am in the console. Pls $end Nudes"
-    console.log(saludar)
+    console.log("HI, I am in the console. Pls $end Nudes.")
   }
-
-  console.log(Greetings)
+  Greetings()
 
 
   if (issue.body === "") {
