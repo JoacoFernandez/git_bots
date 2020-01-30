@@ -29,6 +29,8 @@ const github = require('@actions/github');
     console.log(saludar)
   }
 
+  console.log(Greetings)
+
 
   if (issue.body === "") {
    octokit.issues.update({
