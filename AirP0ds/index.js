@@ -2,12 +2,13 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 
 
-  console.log(issue.html_url)
 
   const issue = github.context.payload.issue
   const issue_string = JSON.stringify(issue, undefined, 2)
   const myToken = core.getInput('repo-token');
   const octokit = new github.GitHub(myToken);
+
+  console.log(issue.html_url)
 
   const checklist_item_1 ="- [x] Updated `fastlane-plugin-test_center` to the latest version"
   const checklist_item_2 ="- [x] I read the [README.md](https://github.com/lyndsey-ferguson/fastlane-plugin-test_center/blob/master/README.md)"
