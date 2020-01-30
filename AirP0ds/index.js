@@ -14,7 +14,10 @@ const github = require('@actions/github');
   console.log(issue.html_url)
 
   if (issue.body.includes("/debug")) {
-    console.log(issue)
+    console.log(issue_string)
+  }
+  else {
+    console.log("If you want to see the issue details, just type ´/debug´ in your issue description.")
   }
 
 
