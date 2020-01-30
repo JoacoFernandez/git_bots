@@ -11,6 +11,27 @@ function DebugMessage(issue){
     console.log("If you want to see the issue details, just type ´/debug´ in your issue description.")
   }
 }
+function CloseIssueIfEmpty(octokit, issue, repo) {
+  
+  if (issue.body === "") {
+    octokit.issues.update({
+      owner: repo.owner,
+      repo: repo.repo,
+      issue_number: issue.number,
+      state: "closed"
+    })
+    const yaktocatBody = "![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)"
+
+    octokit.issues.createComment({
+      owner: repo.owner,
+      repo: repo.repo,
+      issue_number: issue.number,
+      body: yaktocatBody
+    })
+    return true
+  }
+  return false
+}
 function EnsureChecklistCompleted(octokit, body, repo){
   const checklist_item_1 ="- [x] Updated `fastlane-plugin-test_center` to the latest version"
   const checklist_item_2 ="- [x] I read the [README.md](https://github.com/lyndsey-ferguson/fastlane-plugin-test_center/blob/master/README.md)"
@@ -48,25 +69,10 @@ const issue = github.context.payload.issue
 const myToken = core.getInput('repo-token');
 const octokit = new github.GitHub(myToken);
 
-if (issue.body === "") {
-    octokit.issues.update({
-      owner: github.context.repo.owner,
-      repo: github.context.repo.repo,
-      issue_number: issue.number,
-      state: "closed"
-    })
-    const yaktocatBody = "![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)"
-
-    octokit.issues.createComment({
-      owner: github.context.repo.owner,
-      repo: github.context.repo.repo,
-      issue_number: issue.number,
-      body: yaktocatBody
-    })
-    return
-  }
-
 DebugMessage(issue)
+if (CloseIssueIfEmpty(octokit, issue, github.context.repo)) {
+  return
+}
 EnsureChecklistCompleted(octokit, issue.body, github.context.repo)
 
 console.log(issue.html_url)
