@@ -32,7 +32,7 @@ const github = require('@actions/github');
     if (!issue.body.includes(checklist_item_1) && !issue.body.includes(checklist_item_2)) { //&& !issue.body.includes(checklist_item_3) && !issue.body.includes(checklist_item_4)) {
       comment = "Please make sure that you update fastlane to the latest version." + "\n" + "Please make sure that read the README.md"
          if (!issue.body.includes(checklist_item_3) && !issue.body.includes(checklist_item_4)) {
-          comment = ""\n" + "Please make sure that you have reviewed the documentation for the action you are using" + "\n" + "Please make sure that you have removed all sensitive data, otherwise people may use that data in ways that cause harm."
+          comment = "\n" + "Please make sure that you have reviewed the documentation for the action you are using" + "\n" + "Please make sure that you have removed all sensitive data, otherwise people may use that data in ways that cause harm."
           }// + "\n" + "Please make sure that you have reviewed the documentation for the action you are using" + "\n" + "Please make sure that you have removed all sensitive data, otherwise people may use that data in ways that cause harm."
     }
     else if (!issue.body.includes(checklist_item_1)) {
