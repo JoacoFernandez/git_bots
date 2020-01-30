@@ -1,0 +1,8 @@
+name: 'Issues Bot'
+description: A automated system to ensure that a new Issue is formatted as expected.
+inputs:
+  repo-token:
+    description: 'The Github token used to act directly on the given repo'
+runs:
+  using: 'node12'
+  main: 'index.js'
