@@ -4,7 +4,7 @@ const github = require('@actions/github');
 
   const issue = github.context.payload.issue
   const issue_string = JSON.stringify(issue, undefined, 2)
-  console.log(`The event issue_string: ${issue_string}`);
+  console.log(`/debug: ${issue_string}`);
   const myToken = core.getInput('repo-token');
   const octokit = new github.GitHub(myToken);
   body = "![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)"
@@ -13,6 +13,7 @@ const github = require('@actions/github');
   const checklist_item_3 ="- [x] I reviewed the [example(s)](https://github.com/lyndsey-ferguson/fastlane-plugin-test_center/blob/master/README.md) for the action(s) I am using"
   const checklist_item_4 ="- [x] I have removed any sensitive data such as passwords, authentication tokens, or anything else I do not want to world to see"
   console.log(issue.html_url)
+
 
   if (issue.body === "") {
    octokit.issues.update({
